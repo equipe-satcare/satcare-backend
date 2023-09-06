@@ -2,7 +2,11 @@ package com.satc.satcdisciplinabackend.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Funcionario extends Pessoa {
     // ainda precisa decidir se havera uma classe de usuario ou se as informacoes ficarao aqui mesmo
     private String usuario;
