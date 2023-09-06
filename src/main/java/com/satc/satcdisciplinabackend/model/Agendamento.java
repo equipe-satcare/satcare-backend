@@ -1,5 +1,8 @@
 package com.satc.satcdisciplinabackend.model;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
 public class Agendamento {
 	private LocalDate dataAgendamento;
 	private List<Servico> servicos = new ArrayList<>();
