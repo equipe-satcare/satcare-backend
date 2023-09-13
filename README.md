@@ -28,9 +28,9 @@ seus atendimentos com mais facilidade e comodidade.
 * STEPHAN ANTHONY MARQUES DOS SANTOS
 
 ## Regras de Negócio
-1 - Um funcionário não pode ter 2 ou mais agendamentos que conflitam em horário.
-2 - Agendamento só pode ser desmarcado com 3 dias de antecedencia.
-3 - Um cliente não pode ter agendamentos que conflitam horário.
-4 - No agendamento so pode conter serviços q o funcionário realiza.
-5 - Só pode ser realizar agendamento em datas futuras.
-6 - Agendamentos e datas devem respeitar o fuso horário definido pela loja.
+* 1 - Um funcionário não pode ter 2 ou mais agendamentos que conflitam em horário.
+* 2 - Agendamento só pode ser desmarcado com 3 dias de antecedencia.
+* 3 - Um cliente não pode ter agendamentos que conflitam horário.
+* 4 - No agendamento so pode conter serviços q o funcionário realiza.
+* 5 - Só pode ser realizar agendamento em datas futuras.
+* 6 - Agendamentos e datas devem respeitar o fuso horário definido pela loja.
