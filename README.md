@@ -13,17 +13,10 @@ Com a possibilidade de agendar, cancelar e visualizar suas consultas, os funcion
 seus atendimentos com mais facilidade e comodidade.
 </p>
 
-## Integrantes Backend
+## Integrantes
 * ARTHUR DE LUCA HONORATO
 * GUILHERME MACHADO DARABAS
 * JULIANO CARDOSO FELIPE
-* RUBENS SCOTTI JUNIOR
-* STEPHAN ANTHONY MARQUES DOS SANTOS
-
-## Integrantes Projeto Integrador
-* ALEX FARIAS DE ABREU NABO
-* GUILHERME MACHADO DARABAS
-* PAULO ROBERTO SIMÃO
 * RUBENS SCOTTI JUNIOR
 * STEPHAN ANTHONY MARQUES DOS SANTOS
 
