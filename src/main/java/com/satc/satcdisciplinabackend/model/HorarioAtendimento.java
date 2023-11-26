@@ -3,7 +3,6 @@ package com.satc.satcdisciplinabackend.model;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
-import com.satc.satcdisciplinabackend.common.CommonEntity;
 import lombok.Getter;
 import lombok.Setter;
 

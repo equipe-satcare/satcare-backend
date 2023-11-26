@@ -2,10 +2,7 @@ package com.satc.satcdisciplinabackend.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
-import com.satc.satcdisciplinabackend.common.CommonEntity;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,6 +1,5 @@
 package com.satc.satcdisciplinabackend.model;
 
-import com.satc.satcdisciplinabackend.common.CommonEntity;
 import lombok.Getter;
 import lombok.Setter;
 

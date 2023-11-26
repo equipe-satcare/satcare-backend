@@ -2,7 +2,6 @@ package com.satc.satcdisciplinabackend.model;
 
 import java.math.BigDecimal;
 
-import com.satc.satcdisciplinabackend.common.CommonEntity;
 import lombok.Getter;
 import lombok.Setter;
 
