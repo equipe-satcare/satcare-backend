@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
 
 @Getter
 @Setter
-@Entity(name = "funcionario")
+@Entity(name = "funcionarios")
 public class Funcionario extends Pessoa {
     // ainda precisa decidir se havera uma classe de usuario ou se as informacoes ficarao aqui mesmo
 //    private String usuario;
