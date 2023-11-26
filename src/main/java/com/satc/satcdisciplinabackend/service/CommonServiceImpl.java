@@ -54,7 +54,7 @@ public abstract class CommonServiceImpl<Entity> implements CommonService<Entity>
     public Entity update(Integer id, Entity entity) {
         Optional<Entity> optional = repository.findById(id);
         if (optional.isEmpty()){
-            throw new NotFoundException("Produto Não Encontrado");
+            throw new NotFoundException();
         }
 
         Entity existingEntity = optional.get();
