@@ -34,7 +34,7 @@ public abstract class CommonServiceImpl<Entity> implements CommonService<Entity>
 
     @Override
     public Entity findById(Integer id) {
-        return this.findById(id);
+        return this.findById(id, false);
     }
 
     public Entity findById(Integer id, boolean throwException) {
