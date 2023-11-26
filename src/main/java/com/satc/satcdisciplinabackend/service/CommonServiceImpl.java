@@ -3,7 +3,6 @@ package com.satc.satcdisciplinabackend.service;
 import com.satc.satcdisciplinabackend.repository.CommonRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
@@ -28,8 +27,7 @@ public abstract class CommonServiceImpl<Entity> implements CommonService<Entity>
 
     @Override
     public Page<Entity> findPaginated(int page, int size, String filter) {
-        Page<Entity> response = repository.findAll(filter, clazz, PageRequest.of(page, size));
-        return new PageImpl<>(response.getContent(), response.getPageable(), size);
+        return repository.findAll(filter, clazz, PageRequest.of(page, size));
     }
 
     @Override
