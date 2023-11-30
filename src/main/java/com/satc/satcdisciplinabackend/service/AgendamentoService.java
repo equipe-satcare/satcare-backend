@@ -9,7 +9,7 @@ import com.satc.satcdisciplinabackend.repository.AgendamentoRepository;
 import com.satc.satcdisciplinabackend.repository.TipoServicoRepository;
 
 @Service
-public class AgendamentoService extends CommonServiceImpl<AgendamentoService> {
+public class AgendamentoService extends CommonServiceImpl<Agendamento> {
     @Autowired
     public AgendamentoService(ModelMapper modelMapper, AgendamentoRepository repository) {
         super(repository, Agendamento.class, modelMapper);

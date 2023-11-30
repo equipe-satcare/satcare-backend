@@ -1,6 +1,7 @@
 package com.satc.satcdisciplinabackend.resource;
 
 import com.satc.satcdisciplinabackend.dto.FuncionarioDTO;
+import com.satc.satcdisciplinabackend.model.Funcionario;
 import com.satc.satcdisciplinabackend.service.FuncionarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 
+@RestController
+@RequestMapping("/api/funcionarios")
 public class FuncionarioController {
 
     @Autowired
@@ -40,7 +43,7 @@ public class FuncionarioController {
     public ResponseEntity<FuncionarioDTO> create(@RequestBody @Valid Funcionario entity){
         Funcionario save = service.save(entity);
         return ResponseEntity
-                .created(URI.create("/api/tipos-servicos/"+ save.getId()))
+                .created(URI.create("/api/funcionarios/"+ save.getId()))
                 .body(modelMapper.map(save, FuncionarioDTO.class));
     }
 

@@ -26,7 +26,7 @@ import com.satc.satcdisciplinabackend.service.AgendamentoService;
 import com.satc.satcdisciplinabackend.service.TipoServicoService;
 
 @RestController
-@RequestMapping("/api/agendamento")
+@RequestMapping("/api/agendamentos")
 public class AgendamentoController {
     @Autowired
     private ModelMapper modelMapper;
@@ -36,7 +36,7 @@ public class AgendamentoController {
 
     @GetMapping("{id}")
     public ResponseEntity<AgendamentoDTO> findById(@PathVariable("id") int id ) {
-        AgendamentoService entity = service.findById(id);
+        Agendamento entity = service.findById(id);
         return ResponseEntity.ok(modelMapper.map(entity, AgendamentoDTO.class));
     }
 
@@ -46,7 +46,7 @@ public class AgendamentoController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size
     ) {
-        Page<AgendamentoService> pagina = service.findPaginated(page, size, filter);
+        Page<Agendamento> pagina = service.findPaginated(page, size, filter);
         return ResponseEntity.ok(pagina.map(e -> modelMapper.map(e, AgendamentoDTO.class)));
     }
 
@@ -55,7 +55,7 @@ public class AgendamentoController {
     public ResponseEntity<AgendamentoDTO> create(@RequestBody @Valid Agendamento entity){
         Agendamento save = service.save(entity);
         return ResponseEntity
-                .created(URI.create("/api/agendamento/"+ save.getId()))
+                .created(URI.create("/api/agendamentos/"+ save.getId()))
                 .body(modelMapper.map(save, AgendamentoDTO.class));
     }
 
