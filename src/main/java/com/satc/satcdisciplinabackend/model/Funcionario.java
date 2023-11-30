@@ -20,7 +20,7 @@ public class Funcionario extends Pessoa {
 //    private String senha;
     @ManyToMany
     @JoinTable(
-            name = "servicos",
+            name = "funcionario_servicos",
             joinColumns = @JoinColumn(name = "funcionario_id"),
             inverseJoinColumns = @JoinColumn(name = "servico_id")
     )
