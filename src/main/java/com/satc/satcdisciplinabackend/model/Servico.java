@@ -21,6 +21,6 @@ public class Servico extends CommonEntity {
     private Integer tempo;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tipo_servico")
+    @JoinColumn(name = "tipo_servico_id")
     private TipoServico tipoServico;
 }
