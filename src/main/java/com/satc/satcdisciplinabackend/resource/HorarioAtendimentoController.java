@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/tipos-servicos")
+@RequestMapping("/api/horarios-atendimento")
 public class HorarioAtendimentoController {
 
     @Autowired
@@ -43,7 +43,7 @@ public class HorarioAtendimentoController {
     public ResponseEntity<HorarioAtendimentoDTO> create(@RequestBody @Valid HorarioAtendimento entity){
         HorarioAtendimento save = service.save(entity);
         return ResponseEntity
-                .created(URI.create("/api/tipos-servicos/"+ save.getId()))
+                .created(URI.create("/api/horarios-atendimento/"+ save.getId()))
                 .body(modelMapper.map(save, HorarioAtendimentoDTO.class));
     }
 
