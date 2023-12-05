@@ -30,6 +30,10 @@ public class AgendamentoService extends CommonServiceImpl<Agendamento> {
         int tempoAtendimento = agendamento.getServicos().stream()
                 .mapToInt(Servico::getTempo)
                 .sum();
+        if (agendamento.getDataHoraInicio().isBefore(LocalDateTime.now())) {
+            // todo mensagem de erro (data invalida)
+            return null;
+        }
 
         LocalDateTime dataHoraInicio = agendamento.getDataHoraInicio();
         LocalDateTime dataHoraFinal = dataHoraInicio.plusMinutes(tempoAtendimento);
