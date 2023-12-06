@@ -14,7 +14,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/api/servicos")
-public class ServicoController {
+public class ServicoController extends AbstractController {
 
     @Autowired
     private ModelMapper modelMapper;

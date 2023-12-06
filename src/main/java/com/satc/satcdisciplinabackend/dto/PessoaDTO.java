@@ -3,12 +3,9 @@ package com.satc.satcdisciplinabackend.dto;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
-public class FuncionarioDTO {
-    private List<ServicoDTO> servicos;
+public class PessoaDTO {
     private String nome;
     private String telefone;
     private String email;

@@ -42,8 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/api/auth/**").permitAll() // Permit access to /api/auth
-                .anyRequest().authenticated()
-                .and().httpBasic();
+                .anyRequest().permitAll();
     }
 
     @Bean

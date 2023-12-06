@@ -1,11 +1,8 @@
 package com.satc.satcdisciplinabackend.dto;
 
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import com.satc.satcdisciplinabackend.model.Cliente;
-import com.satc.satcdisciplinabackend.model.FormaPagamento;
-import com.satc.satcdisciplinabackend.model.Funcionario;
+import java.time.DayOfWeek;
+import java.time.LocalTime;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,10 +10,8 @@ import lombok.Setter;
 @Setter
 public class HorarioAtendimentoDTO {
     private Integer id;
-    private LocalDate dataAtendimento;
-    private BigDecimal valorTotal;
-    private String observacao;
-    private FormaPagamento formaPagamento;
-    private Cliente cliente;
-    private Funcionario funcionario;
+    private FuncionarioDTO funcionario;
+    private DayOfWeek diaSemana;
+    private LocalTime horaInicio;
+    private LocalTime horaFim;
 }

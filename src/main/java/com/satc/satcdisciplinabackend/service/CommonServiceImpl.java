@@ -1,6 +1,7 @@
 package com.satc.satcdisciplinabackend.service;
 
 import com.satc.satcdisciplinabackend.repository.CommonRepository;
+import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -54,6 +55,8 @@ public abstract class CommonServiceImpl<Entity> implements CommonService<Entity>
         if (optional.isEmpty()){
             throw new NotFoundException();
         }
+
+        modelMapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
 
         Entity existingEntity = optional.get();
         modelMapper.map(entity, existingEntity);

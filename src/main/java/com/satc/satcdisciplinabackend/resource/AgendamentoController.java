@@ -27,7 +27,7 @@ import com.satc.satcdisciplinabackend.service.TipoServicoService;
 
 @RestController
 @RequestMapping("/api/agendamentos")
-public class AgendamentoController {
+public class AgendamentoController extends AbstractController {
     @Autowired
     private ModelMapper modelMapper;
 

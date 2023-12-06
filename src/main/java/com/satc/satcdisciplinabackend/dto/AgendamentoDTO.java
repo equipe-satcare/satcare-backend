@@ -1,22 +1,27 @@
 package com.satc.satcdisciplinabackend.dto;
 
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import com.satc.satcdisciplinabackend.model.Cliente;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.satc.satcdisciplinabackend.model.FormaPagamento;
-import com.satc.satcdisciplinabackend.model.Funcionario;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
 public class AgendamentoDTO {
     private Integer id;
-    private LocalDate dataAgendamento;
     private BigDecimal valorTotal;
     private String observacao;
     private FormaPagamento formaPagamento;
-    private Cliente cliente;
-    private Funcionario funcionario;
+//    private ClienteD cliente;
+    private FuncionarioDTO funcionario;
+    private List<ServicoDTO> servicos;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
+    private LocalDateTime dataHoraInicio;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
+    private LocalDateTime dataHoraFim;
 }
