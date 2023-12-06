@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @Service
 public class AgendamentoService extends CommonServiceImpl<Agendamento> {
     @Autowired
@@ -37,6 +38,10 @@ public class AgendamentoService extends CommonServiceImpl<Agendamento> {
         int tempoAtendimento = servicos.stream()
                 .mapToInt(Servico::getTempo)
                 .sum();
+        if (agendamento.getDataHoraInicio().isBefore(LocalDateTime.now())) {
+            // todo mensagem de erro (data invalida)
+            return null;
+        }
 
         BigDecimal valorTotal = servicos.stream()
                 .map(Servico::getValor)
@@ -61,7 +66,21 @@ public class AgendamentoService extends CommonServiceImpl<Agendamento> {
             return null;
         }
 
+        Funcionario funcionario = funcionarioRepository.findById(agendamento.getFuncionario().getId()).get();
+        List<Integer> servicosIdsFuncionario = funcionario.getServicos()
+                .stream()
+                .map(Servico::getId)
+                .toList();
 
+        // verifica se algum servicoId do agendamento nao esta na lista de servicos do funcionario
+        boolean possuiServicoInvalido = agendamento.getServicos().stream()
+                .anyMatch(servico -> !servicosIdsFuncionario.contains(servico.getId()));
+
+        if (possuiServicoInvalido) {
+            System.out.println("Lista de servicos invalida");
+            // todo mensagem de erro
+            return null;
+        }
 
         return super.save(agendamento);
     }
