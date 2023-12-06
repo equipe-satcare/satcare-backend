@@ -14,7 +14,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/api/horarios-atendimento")
-public class HorarioAtendimentoController {
+public class HorarioAtendimentoController extends AbstractController {
 
     @Autowired
     private ModelMapper modelMapper;

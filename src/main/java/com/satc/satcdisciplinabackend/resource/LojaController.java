@@ -14,7 +14,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/api/loja")
-public class LojaController {
+public class LojaController extends AbstractController {
 
     @Autowired
     private ModelMapper modelMapper;

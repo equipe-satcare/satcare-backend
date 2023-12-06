@@ -14,7 +14,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/api/funcionarios")
-public class FuncionarioController {
+public class FuncionarioController extends AbstractController {
 
     @Autowired
     private ModelMapper modelMapper;

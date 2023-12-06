@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class ServicoDTO {
+    private Integer id;
     private String descricao;
     private BigDecimal valor;
     private Integer tempo;
