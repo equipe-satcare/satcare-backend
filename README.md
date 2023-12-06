@@ -27,3 +27,5 @@ seus atendimentos com mais facilidade e comodidade.
 * 4 - No agendamento so pode conter serviços q o funcionário realiza.
 * 5 - Só pode ser realizar agendamento em datas futuras.
 * 6 - Agendamentos e datas devem respeitar o fuso horário definido pela loja.
+* 7 - Não pode cadastrar funcionario/cliente com CPF ja cadastrado.
+* 8 - O cliente so pode realizar um agendamento com o cadastro 100% completo.
